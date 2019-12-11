@@ -26,25 +26,50 @@
 				color:purple
 				}
 				#green {
-				  color:green
+				  color:green;
+				  
 				}
 				
 			.underlined{
 					
 					text-decoration: underline;
-			
+						
 					}
+					
+			#first-section{
+					color:#EA4436;
+					background-color:#81F7BE;
+					width:200px;
+					float:left;
+					}
+			#second-section{
+					color:blue;
+					background-color:#5C4E24;
+					width:200px;
+					float:right;
+					}
+			.clear-float{
+							clear:both;
+						}
 		</style>
-		
-		
-	</head>
+		</head>
 	
 	<body>
-		<p class="red large"> The brown fox jumped </p>
-		<p class="large"> I love internal css </p>
+		<div id="first-section">
+			<p> The brown fox jumped </p>
+			<p> I love internal css </p>
+		
+		</div>
+		<div id="second-section">
 		<p id="green"> This is more text. <span class="underlined"> And this text is underlined</span></p>
 		
+		</div>
+		
 		<h1 class="red">The Css is Cool</h1>
+		
+	
+		<div class="clear-float"></div>
+		<p> This paragraph is not floated!</p>
 		
 	</body>
 
