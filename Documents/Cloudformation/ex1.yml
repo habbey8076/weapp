@@ -3,8 +3,8 @@ Resources:
     Type: 'AWS::EC2::Instance'
     Properties:
       InstanceType: t2.micro
-      ImageId: ami-467ca739
+      ImageId: ami-04763b3055de4860b
       Tags:
-        - Key: Name
-          Value: A simple sample
+        - Key: "Name"
+          Value: "Simple sample"
          
