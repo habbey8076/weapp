@@ -3,7 +3,7 @@ Resources:
     Type: "AWS::EC2::Instance"
     Properties:
       InstanceType: t2.micro
-      ImageId: ami-0ff24797826ebbcd5 # Amazon Linux AMI in Sydney
+      ImageId: aami-0ff24797826ebbcd5 # Amazon Linux AMI in Canada
       SecurityGroups: 
         - !Ref MySecurityGroup
       Tags:
