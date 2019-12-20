@@ -16,10 +16,10 @@ Mappings:
     ap-southeast-1:
       AMI: ami-e2adf99e
     ap-southeast-2:
-      AMI: ami-43874721
+      AMI: ami-43874721    
 Resources:
-  Ec2Instance:
-    Type: "AWS::EC2::Instance"
+  EC2Instance:
+    Type: AWS::EC2::Instance
     Metadata: 
       AWS::CloudFormation::Init:
         config: 
@@ -30,7 +30,7 @@ Resources:
           files: 
             /var/www/html/index.php:
               content: !Sub |
-                <?php print "Hello world Abi is  here!"; ?>
+                <?php print "Hello world Abi is here!"; ?>
           services: 
             sysvinit:
               httpd:
@@ -43,10 +43,10 @@ Resources:
         - RegionMap
         - !Ref AWS::Region
         - AMI
-      SecurityGroups:
+      SecurityGroupIds:
         - !Ref MySecurityGroup
       Tags:
-        - Key: "Name"
+        - Key: Name
           Value: !Ref NameOfService
       KeyName: !Ref KeyName
       UserData:
@@ -60,12 +60,8 @@ Resources:
   MySecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Open Ports 22 and 80
+      GroupDescription: Open Ports 80 for websites
       SecurityGroupIngress:
-      - IpProtocol: tcp
-        FromPort: '22'
-        ToPort: '22'
-        CidrIp: 0.0.0.0/0
       - IpProtocol: tcp
         FromPort: '80'
         ToPort: '80'

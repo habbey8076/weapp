@@ -73,4 +73,8 @@ Resources:
 Outputs:
   Website:
     Description: The Public DNS for the EC2 Instance
-    Value: !Sub 'http://${EC2Instance.PublicDnsName}'
+    Value: !Sub 'http://${Ec2Instance.PublicDnsName}'
+
+
+    
+    
