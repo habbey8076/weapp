@@ -29,6 +29,25 @@
 		
 		<script type="text/javascript">
 		
+		function doAGuess(correctAnswer){
+		
+		
+				var guess = Math.random();
+						guess = guess * 6;
+						guess = Math.floor(guess);
+						
+						if (guess == correctAnswer){
+						
+							//Computer is correct
+							return(true);
+						}else {
+						
+							//computer is wrong
+							return(false);
+						}
+		
+					}
+		
 		document.getElementById("guess").onclick = function() {
 		
 						var myNumber = document.getElementById("myNumber").value;
@@ -39,19 +58,16 @@
 						
 						while (gotIt == false){
 						
-						var guess = Math.random();
-						guess = guess * 6;
-						guess = Math.floor(guess);
+						if(doAGuess(myNumber) == true){
 						
-						if (guess == myNumber){
-						
-							//Computer is correct
 							gotIt = true;
-							alert("Got it. It was " + guess + ".It took " + numberOfGuess + " guesses " );
+							
+							alert("Got it! It was a " + myNumber + ". It took me " + numberOfGuess + "guesses")
+						
 						}else {
 						
-							//computer is wrong
-							numberOfGuess++;
+							
+							numberOfGuess;
 						}
 						
 						
