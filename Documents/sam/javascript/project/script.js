@@ -1,46 +1,4 @@
-<html>
-
-	<head>
-	
-			<title> Reaction Timme Project </title>
-			<style type="text/css">
-			
-			
-			body {
-			
-			   font-family: sans-serif;
-			  }
-			
-			#shape {
-					
-				width: 200px;
-				height: 200px;
-				backgroundColor: red;
-				display:none;
-				position:relative;
-						
-				}
-				
-			.bold {
-			
-					font-weight: bold;
-				}
-			</style>
-	</head>
-	
-	<body>
-	
-		<h1> Test Your Reactions </h1>
-		
-		<p> Click on the boxes and circles as qucikly as possible </p>
-	
-		<p class="bold"> Your time: <span id="timeTaken"></span></p>
-		<div id="shape"></div>
-		
-		
-		<script type="text/javascript">
-		
-			var start = new Date().getTime();
+var start = new Date().getTime();
 			
 			function getRandomColor(){
 			
@@ -111,13 +69,3 @@
 				appearAfterDelay();
 			
 			}
-		
-													
-		</script>
-		
-				
-	</body>
-
-</html>
-
-
